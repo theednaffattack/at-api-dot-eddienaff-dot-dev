@@ -1,4 +1,4 @@
-(import { MigrationInterface } from "typeorm";
+import { MigrationInterface } from "typeorm";
 import { lorem } from "faker";
 
 import { Venue } from "../entity/Venue";
@@ -12,7 +12,7 @@ export class SeedVenuesWithReviews1595017531832 implements MigrationInterface {
       .select()
       .getMany();
 
-    allVenues.forEach(async venue => {
+    allVenues.forEach(async (venue) => {
       const num = randomNumber(6, 35);
       const manyRandomUsers = await User.createQueryBuilder("user")
         .select("user.id")
@@ -20,7 +20,7 @@ export class SeedVenuesWithReviews1595017531832 implements MigrationInterface {
         .limit(num)
         .getMany();
 
-      const manyReviewsPrep = manyRandomUsers.map(user => {
+      const manyReviewsPrep = manyRandomUsers.map((user) => {
         return Review.create({
           userId: user.id,
           venueId: venue.id,
