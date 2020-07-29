@@ -44,8 +44,9 @@ export class Photo extends BaseEntity {
   // )
   // metadata: PhotoMetadata;
 
+  @Field(()=> ID, { nullable: false })
   @Column({ nullable: true })
-  hotelId: number;
+  hotelId: string;
 
   @ManyToOne(
     () => Hotel,
