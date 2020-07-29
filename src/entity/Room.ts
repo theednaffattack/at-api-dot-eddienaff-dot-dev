@@ -43,7 +43,11 @@ export class Room extends BaseEntity {
     () => Reservation,
     reservation => reservation.room,
   )
-  reserved: Reservation[];
+  reservations: Reservation[];
+
+  
+  @Column({nullable: true})
+  hotelId: string;
 
   @Field(() => Hotel)
   @ManyToOne(
