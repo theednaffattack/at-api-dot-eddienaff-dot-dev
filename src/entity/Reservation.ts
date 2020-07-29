@@ -27,7 +27,6 @@ export class Reservation extends BaseEntity {
   updatedAt: Date;
 
 
-
   @Field(() => Date)
   @Column()
   from: Date;
@@ -51,7 +50,7 @@ export class Reservation extends BaseEntity {
 
   @ManyToOne(
     () => Room,
-    room => room.reserved,
+    room => room.reservations,
     { cascade: true },
   )
   room: Room;
