@@ -21,6 +21,8 @@ export class GenerateVenueData1594843966532 implements MigrationInterface {
 }
 
 // export async function manualDown(): Promise<void> {
+
+// import { devOrmconfig } from "../config/dev-orm-config";
 //   try {
 //     await createConnection(devOrmconfig);
 
