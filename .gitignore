@@ -38,3 +38,5 @@ src/config/seeds/hotelPhotosDict.json
 src/seed-data/overpass-turbo-queries/museum-pub-restaurant.json
 src/seed-data/overpass-turbo-queries/overpass-hotels-sf.json
 src/seed-data/photoDataFinal.json
+docs/idea/server permission postgres.md
+docs/process.md
