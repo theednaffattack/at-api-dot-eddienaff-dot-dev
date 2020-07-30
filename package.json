@@ -62,7 +62,7 @@
     "leaked-handles": "^5.2.0",
     "maketypes": "^1.1.2",
     "node-fetch": "^2.6.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.4",
     "prettier": "^1.13.0",
     "rimraf": "^3.0.2",
     "stream-json": "^1.5.0",
