@@ -40,3 +40,7 @@ src/seed-data/overpass-turbo-queries/overpass-hotels-sf.json
 src/seed-data/photoDataFinal.json
 docs/idea/server permission postgres.md
 docs/process.md
+src/seed-data/photo-data.ts
+src/seed-data/prep-bay-area-hotel-photos-seed.ts
+src/seed-data/prep-bay-area-hotel-seed.ts
+src/scripts/seed-hotel-from-feature.ts
