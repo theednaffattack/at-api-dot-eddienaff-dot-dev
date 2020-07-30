@@ -15,7 +15,14 @@ cert.pem
 chain.pem
 key.pem
 
-# hide photo seed files
+# hide data loader attempts
+src/modules/utils/data-loaders/batch-channel-members-loader.tsHIDE
+src/modules/utils/data-loaders/batch-example-loader.tsHIDE
+src/modules/utils/data-loaders/batch-team-loader.tsFIX
+src/modules/utils/data-loaders/batch-team-members-loader.tsHIDE
+src/modules/utils/data-loaders/batch-user-loader.NOPEtsHIDE
+
+# hide Photo entity seed files
 src/seed-data/2020-05-06T02:57:36.034Z-generated-hotel-photos-seed.json
 src/seed-data/2020-05-06T02:59:36.424Z-generated-hotel-photos-seed.json
 src/seed-data/2020-05-06T03:00:51.315Z-generated-hotel-photos-seed.json
@@ -24,23 +31,24 @@ src/seed-data/2020-05-06T03:11:38.009Z-generated-hotel-photos-seed.json
 src/seed-data/2020-05-06T03:12:22.481Z-generated-hotel-photos-seed.json
 src/seed-data/2020-05-06T03:12:56.701Z-generated-hotel-photos-seed.json
 src/seed-data/2020-05-06T03:26:04.989Z-generated-hotel-photos-seed.json
-src/modules/utils/data-loaders/batch-channel-members-loader.tsHIDE
-src/modules/utils/data-loaders/batch-example-loader.tsHIDE
-src/modules/utils/data-loaders/batch-team-loader.tsFIX
-src/modules/utils/data-loaders/batch-team-members-loader.tsHIDE
-src/modules/utils/data-loaders/batch-user-loader.NOPEtsHIDE
+src/seed-data/photoDataFinal.json
+src/seed-data/photo-data.ts
+src/seed-data/prep-bay-area-hotel-photos-seed.ts
+
+
+# hide Hotel entity seed files, OLD???
+
+src/seed-data/overpass-turbo-queries/museum-pub-restaurant.json
+src/seed-data/overpass-turbo-queries/overpass-hotels-sf.json
 src/seed-data/ALL_HOTELS.json
 src/seed-data/bay-area-hotels.json
 src/seed-data/generated-hotel-seed.json
 src/seed-data/generated-hotel-stream.json
 src/config/seeds/generated-hotel-seed.json
 src/config/seeds/hotelPhotosDict.json
-src/seed-data/overpass-turbo-queries/museum-pub-restaurant.json
-src/seed-data/overpass-turbo-queries/overpass-hotels-sf.json
-src/seed-data/photoDataFinal.json
-docs/idea/server permission postgres.md
-docs/process.md
-src/seed-data/photo-data.ts
-src/seed-data/prep-bay-area-hotel-photos-seed.ts
 src/seed-data/prep-bay-area-hotel-seed.ts
 src/scripts/seed-hotel-from-feature.ts
+
+# hide random process docs
+docs/idea/server permission postgres.md
+docs/process.md
