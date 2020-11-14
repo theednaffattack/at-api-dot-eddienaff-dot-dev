@@ -2,9 +2,13 @@ import { MigrationInterface } from "typeorm";
 import { lorem } from "faker";
 
 import { Hotel as HotelEntity } from "../entity/Hotel";
-import { randomNumber } from "../scripts/seed-hotel-from-element";
+// import { randomNumber } from "../scripts/seed-hotel-from-element.tsHIDE";
 import { User } from "../entity/User";
 import { Review } from "../entity/Review";
+
+export function randomNumber(min: number, max: number): number {
+  return Math.random() * (max - min) + min;
+}
 
 export class SeedHotelsWithReviews1595020328060 implements MigrationInterface {
   public async up(): Promise<void> {
@@ -12,7 +16,7 @@ export class SeedHotelsWithReviews1595020328060 implements MigrationInterface {
       .select()
       .getMany();
 
-    allHotels.forEach(async hotel => {
+    allHotels.forEach(async (hotel) => {
       const num = randomNumber(88, 300);
       const manyRandomUsers = await User.createQueryBuilder("user")
         .select("user.id")
@@ -20,7 +24,7 @@ export class SeedHotelsWithReviews1595020328060 implements MigrationInterface {
         .limit(num)
         .getMany();
 
-      const manyReviewsPrep = manyRandomUsers.map(user => {
+      const manyReviewsPrep = manyRandomUsers.map((user) => {
         return Review.create({
           userId: user.id,
           hotelId: hotel.id,
