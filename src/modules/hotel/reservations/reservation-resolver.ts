@@ -72,12 +72,17 @@ export class ReservationResolver {
           (reservation: Reservation) => {
             // we're returning a Boolean into the array
             // false = unavailable (reserved), true = available (no overlapping dates)
+            console.log("VIEW AVAILABLE ROOMS", {
+              from: isFromInRange(from, reservation),
+              to: isToInRange(to, reservation),
+              reservation,
+            });
             return (
               !isFromInRange(from, reservation) && !isToInRange(to, reservation)
             );
           }
         );
-
+        console.log("VIEW AVAILABLE RES MAPPINGS", resMappings);
         // filter out rooms that have reservations that
         // overlap either of the requested reservation dates
         // seeking a more efficient solution than max looping
@@ -120,6 +125,7 @@ export class ReservationResolver {
       updatedRoom = await getRoom.save();
       newReservation.room = updatedRoom;
     } else {
+      console.log("WHAT IS GOING ON?", { getRoom, existingReservations });
       throw Error("No reservations available!");
     }
 
