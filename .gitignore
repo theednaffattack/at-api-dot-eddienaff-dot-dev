@@ -52,3 +52,5 @@ src/scripts/seed-hotel-from-feature.ts
 # hide random process docs
 docs/idea/server permission postgres.md
 docs/process.md
+src/scripts/seed-hotel-from-element.tsHIDE
+src/scripts/seed-hotel-from-feature.tsHIDE
