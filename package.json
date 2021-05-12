@@ -99,7 +99,7 @@
     "internal-ip": "^6.0.0",
     "ioredis": "^4.16.0",
     "jest": "^26.2.2",
-    "nodemailer": "^6.4.5",
+    "nodemailer": "^6.4.16",
     "pg": "^8.3.0",
     "pino": "^5.17.0",
     "pino-pretty": "^4.0.0",
